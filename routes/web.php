@@ -11,6 +11,10 @@
 |
 */
 
+if (env('APP_ENV') === 'prod') {
+    \URL::forceScheme('https');
+}
+
 Route::get('/', function () {
     return view('welcome');
 });
